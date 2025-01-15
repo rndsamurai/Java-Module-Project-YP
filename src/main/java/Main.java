@@ -3,10 +3,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         String name;
-        Car[] cars = new Car[3];
+        int i = 3;
+        Car[] cars = new Car[i];
         int speed;
+
         Scanner scanner = new Scanner(System.in);
-for (int i = 0; i < 3; i++) {
+for (i = 0; i < 3; i++) {
     System.out.println("Название машины № " + (i + 1) + ":");
     name = scanner.next();
 
@@ -18,7 +20,7 @@ for (int i = 0; i < 3; i++) {
             System.out.println("Введите целочисленное значение.");
 
         } else speed = scanner.nextInt();
-            if (speed < 250 && speed > 0) {
+            if (speed <= 250 && speed > 0) {
             break;
         }
         System.out.println("Введено некорректное значение скорости.");
